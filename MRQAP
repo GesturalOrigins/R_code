@@ -1,0 +1,17 @@
+###Code for Multiple Regression Quadratic Assignment Procedure with Double Semi Partailing: linear regression model formula for matrix data###
+
+mrqap.dsp(formula, intercept = TRUE, directed = "undirected",
+          diagonal = FALSE, test.statistic = "t-value", 
+          tol = 1e-07, randomisations = 1000)
+         
+####example: does matrix B predict matrix A?
+#intercept = TRUE: yes we are calculating the intercept 
+#directed="undirected" : the networks of matrices are undirected
+#diagonal = FALSE: not including left-loop values (e.g. association value of individual aXa) 
+#test.statistic = "t-value": use t-statistics to calculate p-value
+#tol=1e-07: the tolerance value for the qr function
+#randomisations = 1000: number of randomisations performed to calculate p-value
+
+mrqap.dsp(A~B, intercept = TRUE, directed = "undirected",
+          diagonal = FALSE, test.statistic = "t-value", 
+          tol = 1e-07, randomisations = 1000)
